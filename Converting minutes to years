@@ -1,0 +1,22 @@
+package MyCap_Submissions;
+import java.util.*;
+public class second_submission {
+	
+	
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Enter number of minutes: ");
+		int minutes = in.nextInt();
+		
+		int totaldays = minutes / 1440;    // This gives us total number of days and one day has 1440 minutes
+		int years = totaldays / 365;   // This number gives us number of years
+		int days = totaldays - (365 * years);
+		System.out.print(""+ minutes);
+		System.out.print(" minutes is approximately "+years);
+		System.out.print(" years and "+days);
+		System.out.print(" days.");
+	}
+
+}
