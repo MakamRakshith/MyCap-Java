@@ -1,0 +1,86 @@
+package MyCap_Submissions;
+import java.util.*;
+public class Matrix_multiplication {
+
+	public static void main(String[] args) {
+		int [][] arr1 = new int[3][3];
+		int [][] arr2 = new int[3][3];
+		int [][] arr3 = new int[3][3];
+		Scanner in = new Scanner(System.in);
+		int i,j,k,choice;
+		//Inserting First Matrix
+  System.out.println("Enter the first Matrix: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				arr1[i][j] = in.nextInt();
+			}
+			System.out.println();
+		}
+    //Inserting Second matrix
+		System.out.println("Enter the second Matrix: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				arr2[i][j] = in.nextInt();
+			}
+			System.out.println();
+		}
+		System.out.println("Enter Choice: 1. Matrix Multiplication 2. Matrix Addition");
+		choice = in.nextInt();
+		switch(choice)
+		{
+		case 1: for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				arr3[i][j]=0;
+				for(k=0;k<3;k++)
+				{
+					arr3[i][j]= arr3[i][j] + arr1[i][k] * arr2[k][j];
+				}
+			}
+			
+		}
+		System.out.println("The product of the two matrices is: ");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				
+				System.out.print(arr3[i][j]+" ");
+			}
+			System.out.println();
+		}
+		break;
+		
+		case 2:
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					
+					arr3[i][j] = arr1[i][j] + arr2[i][j];
+				}
+				
+			}
+			System.out.println("The Sum of the two Matrices is: ");
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					
+					System.out.print(arr3[i][j]+" ");
+				}
+				System.out.println();
+			}
+			break;
+			default: 
+				System.out.println("Invalid Choice");
+		
+		}
+	}
+
+}
