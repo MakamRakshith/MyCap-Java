@@ -1,0 +1,20 @@
+package MyCap_Submissions;
+
+public class Employee {
+		String name;
+		int year;
+		double salary;
+		String address;
+		
+		public Employee(String name,int year,double salary,String address) {
+			System.out.println(name+"\t\t"+year+"\t\t"+salary+"\t\t"+address);
+		}
+		
+	public static void main(String[] args) {
+		System.out.println("Name\t Year of Joining\t Salary\t\t\t Address");
+		Employee one = new Employee("Rajesh",1995,250000,"Bangalore"); 
+		Employee two = new Employee("Suresh",2005,160000,"Mumbai");
+		Employee three = new Employee("Mukesh",2013,1000000,"Hyderabad");
+	}
+
+}
